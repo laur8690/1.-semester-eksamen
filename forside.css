@@ -1,0 +1,302 @@
+/* ================================================= */
+/* ================= RESET ========================= */
+/* ================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================================================= */
+/* ================= BODY ========================== */
+/* ================================================= */
+
+body {
+    /* Fjerner browserens standard luft */
+    margin: 0;
+
+    /* Baggrundsbillede */
+    background-image: url(img/krylletpapir2.jpg);
+
+    /* Baggrunden fylder hele siden */
+    background-size: cover;
+
+    /* Centrerer baggrunden */
+    background-position: center;
+
+    /* Baggrunden gentages ikke */
+    background-repeat: no-repeat;
+
+    /* Standard font */
+    font-family: sans-serif;
+}
+
+/* ================================================= */
+/* ================= CONTAINER ===================== */
+/* ================================================= */
+
+.container {
+
+    /* Luft i siderne */
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* ================================================= */
+/* ================= NAVBAR ======================== */
+/* ================================================= */
+
+.navbar {
+    /* Creme baggrund */
+    background-color: #fdf6d8;
+
+    /* Logo til venstre og burger til højre */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Gør navbaren lavere */
+    padding: 15px 20px;
+
+    /* Luft under navbar */
+    margin-bottom: 30px;
+
+    /* Bruges til tape */
+    position: relative;
+}
+
+/* Tape øverst til venstre */
+.navbar::before {
+    content: "";
+
+    width: 40px;
+    height: 12px;
+
+    background-color: white;
+
+    position: absolute;
+    left: -12px;
+    top: 8px;
+
+    transform: rotate(-45deg);
+}
+
+/* Tape nederst til højre */
+.navbar::after {
+    content: "";
+
+    width: 40px;
+    height: 12px;
+
+    background-color: white;
+
+    position: absolute;
+    right: -12px;
+    bottom: 8px;
+
+    transform: rotate(45deg);
+}
+
+/* ================================================= */
+/* ================= LOGO ========================== */
+/* ================================================= */
+
+.logo img {
+    /* Logo størrelse på mobil */
+    width: 45px;
+}
+
+/* ================================================= */
+/* ================= NAVIGATION ==================== */
+/* ================================================= */
+
+.nav-links {
+    /* Skjuler almindelig menu på mobil */
+    display: none;
+}
+
+/* ================================================= */
+/* ================= HAMBURGER ===================== */
+/* ================================================= */
+
+.hamburger {
+    /* Viser burger-menu på mobil */
+    display: flex;
+
+    /* Streger under hinanden */
+    flex-direction: column;
+
+    /* Afstand mellem stregerne */
+    gap: 5px;
+
+    cursor: pointer;
+}
+
+/* De 3 hamburger-streger */
+.hamburger span {
+    width: 28px;
+    height: 4px;
+
+    background-color: #0047d4;
+}
+
+/* ================================================= */
+/* ================= HERO SECTION ================== */
+/* ================================================= */
+
+.hero {
+    /* Creme baggrund */
+    background-color: #fdf6d8;
+
+    /* Tekst og billede ved siden af hinanden */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* Luft indeni boksen */
+    padding: 35px 25px;
+
+    /* Luft under hero */
+    margin-bottom: 40px;
+
+    /* Bruges til tape */
+    position: relative;
+}
+
+/* Tape nederst til venstre */
+.hero::before {
+    content: "";
+
+    width: 40px;
+    height: 12px;
+
+    background-color: white;
+
+    position: absolute;
+    left: -12px;
+    bottom: 15px;
+
+    transform: rotate(45deg);
+}
+
+/* Tape øverst til højre */
+.hero::after {
+    content: "";
+
+    width: 40px;
+    height: 12px;
+
+    background-color: white;
+
+    position: absolute;
+    right: -12px;
+    top: 10px;
+
+    transform: rotate(45deg);
+}
+
+/* ================================================= */
+/* ================= HERO TEKST ==================== */
+/* ================================================= */
+
+.hero-text {
+    /* Teksten fylder lidt over halvdelen */
+    width: 55%;
+}
+
+/* Overskrift */
+.hero-text h1 {
+    color: #ffa538;
+
+    font-size: 2.3rem;
+
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+/* Beskrivelse */
+.hero-text p {
+    color: #0047d4;
+
+    font-size: 0.9rem;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+}
+
+/* ================================================= */
+/* ================= HERO BILLEDE ================== */
+/* ================================================= */
+
+.hero-image img {
+    /* Billedstørrelse på mobil */
+    width: 160px;
+
+    display: block;
+}
+
+/* ================================================= */
+/* ================= PORTFOLIO GRID ================ */
+/* ================================================= */
+
+.portfolio-grid {
+    /* Mobile first: bokse under hinanden */
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 40px;
+}
+
+/* ================================================= */
+/* ================= PORTFOLIO BOKSE =============== */
+/* ================================================= */
+
+.portfolio-grid article {
+    /* Grå placeholder-baggrund */
+    background-color: #d9d9d9;
+
+    /* Højde på billedboksene */
+    height: 400px;
+
+    /* Skjuler alt der går udenfor boksen */
+    overflow: hidden;
+
+    /* Gør det lettere at placere indhold */
+    position: relative;
+}
+
+/* Billeder inde i portfolio-bokse */
+.portfolio-grid img {
+    width: 100%;
+
+    height: 100%;
+
+    /* Får billedet til at fylde boksen pænt */
+    object-fit: cover;
+
+    display: block;
+
+    /* SORT/HVID + BLUR + MØRKERE */
+    filter: grayscale(100%) blur(0px) brightness(100%);
+
+}
+
+/* Tekst, hvis du stadig har h2 i boksene */
+.portfolio-grid h2 {
+    color: #0047d4;
+
+    font-size: 1.8rem;
+
+    text-align: center;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
