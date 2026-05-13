@@ -19,7 +19,7 @@ body {
     /* Baggrundsbillede */
     background-image: url(img/krylletpapir2.jpg);
 
-    /* Baggrunden fylder hele siden */
+    /* Viser hele baggrundsbilledet */
     background-size: cover;
 
     /* Centrerer baggrunden */
@@ -64,38 +64,6 @@ body {
 
     /* Bruges til tape */
     position: relative;
-}
-
-/* Tape øverst til venstre */
-.navbar::before {
-    content: "";
-
-    width: 40px;
-    height: 12px;
-
-    background-color: white;
-
-    position: absolute;
-    left: -12px;
-    top: 8px;
-
-    transform: rotate(-45deg);
-}
-
-/* Tape nederst til højre */
-.navbar::after {
-    content: "";
-
-    width: 40px;
-    height: 12px;
-
-    background-color: white;
-
-    position: absolute;
-    right: -12px;
-    bottom: 8px;
-
-    transform: rotate(45deg);
 }
 
 /* ================================================= */
@@ -162,38 +130,6 @@ body {
 
     /* Bruges til tape */
     position: relative;
-}
-
-/* Tape nederst til venstre */
-.hero::before {
-    content: "";
-
-    width: 40px;
-    height: 12px;
-
-    background-color: white;
-
-    position: absolute;
-    left: -12px;
-    bottom: 15px;
-
-    transform: rotate(45deg);
-}
-
-/* Tape øverst til højre */
-.hero::after {
-    content: "";
-
-    width: 40px;
-    height: 12px;
-
-    background-color: white;
-
-    position: absolute;
-    right: -12px;
-    top: 10px;
-
-    transform: rotate(45deg);
 }
 
 /* ================================================= */
@@ -278,6 +214,9 @@ body {
     /* Får billedet til at fylde boksen pænt */
     object-fit: cover;
 
+    /* Flytter fokuspunktet */
+    object-position: center;
+
     display: block;
 
     /* SORT/HVID + BLUR + MØRKERE */
@@ -299,4 +238,253 @@ body {
     left: 50%;
 
     transform: translate(-50%, -50%);
+}
+
+/* ================================================= */
+/* ================= OM MIG SECTION ================ */
+/* ================================================= */
+
+.about-section {
+
+    /* Creme baggrund */
+    background-color: #fdf6d8;
+
+    /* Luft indeni */
+    padding: 35px 25px;
+
+    /* Luft over section */
+    margin-top: 50px;
+
+    /* Luft under section */
+    margin-bottom: 60px;
+
+    /* Bruges til tape */
+    position: relative;
+}
+
+/* Overskrift */
+.about-section h2 {
+
+    color: #ffa538;
+
+    font-size: 1.6rem;
+
+    margin-bottom: 25px;
+}
+
+/* Container til tekst + billede */
+.about-content {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+/* Tekst område */
+.about-text {
+
+    width: 55%;
+}
+
+/* Tekst styling */
+.about-text p {
+
+    color: #3a1608;
+
+    font-family: monospace;
+
+    font-size: 0.8rem;
+
+    line-height: 1.1;
+
+    margin-bottom: 18px;
+}
+
+/* Portræt billede */
+.about-img {
+
+    width: 130px;
+
+    height: 190px;
+
+    object-fit: cover;
+}
+
+/* Program ikoner */
+.program-icons {
+
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+/* Ikon størrelse */
+.program-icons img {
+
+    width: 18px;
+
+    height: 18px;
+
+    object-fit: contain;
+}
+
+/* Logo nederst */
+.about-logo {
+
+    width: 55px;
+
+    position: absolute;
+
+    right: 30px;
+    bottom: 25px;
+}
+
+
+
+/* ================================================= */
+/* ================= KONTAKT SECTION =============== */
+/* ================================================= */
+
+.contact-section {
+
+    background-color: #fdf6d8;
+
+    padding: 35px 25px;
+
+    margin-bottom: 70px;
+
+    position: relative;
+}
+
+/* Overskrift */
+.contact-section h2 {
+
+    color: #ffa538;
+
+    font-size: 1.6rem;
+
+    margin-bottom: 20px;
+}
+
+/* Kontakt container */
+.contact-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
+/* Kontakt tekst */
+.contact-content > p {
+
+    width: 50%;
+
+    color: #3a1608;
+
+    font-family: monospace;
+
+    font-size: 0.8rem;
+
+    line-height: 1.1;
+}
+
+/* Kontakt info */
+.contact-info {
+
+    width: 50%;
+}
+
+/* Kontakt bokse */
+.contact-info p {
+
+    background-color: #e6e6e6;
+
+    color: #0047d4;
+
+    font-weight: bold;
+
+    font-size: 0.8rem;
+
+    padding: 8px 10px;
+
+    border-radius: 6px;
+
+    margin-bottom: 10px;
+}
+
+
+
+/* ================================================= */
+/* ================= FOOTER ======================== */
+/* ================================================= */
+
+.footer {
+
+    background-color: #fdf6d8;
+
+    padding: 30px 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    gap: 15px;
+}
+
+/* Footer logo */
+.footer-logo {
+
+    width: 55px;
+}
+
+/* Footer overskrifter */
+.footer h3 {
+
+    color: #0047d4;
+
+    font-size: 0.9rem;
+
+    margin-bottom: 12px;
+}
+
+/* Footer tekst */
+.footer p {
+
+    color: #0047d4;
+
+    font-weight: bold;
+
+    font-size: 0.75rem;
+
+    line-height: 1.3;
+}
+
+/* Sociale medier */
+.socials {
+
+    display: flex;
+
+    gap: 8px;
+
+    align-self: flex-end;
+}
+
+/* Sociale medier ikoner */
+.socials img {
+
+    width: 18px;
+
+    height: 18px;
 }
