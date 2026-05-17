@@ -12,6 +12,10 @@
     <!-- Forbinder HTML med ekstern CSS -->
     <link rel="stylesheet" href="forside.css">
 
+    <!-- Line Awesome ikoner -->
+    <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
     <!-- Titel i browser fanen -->
     <title>Laura Amalies præsentationsportfolio</title>
 
@@ -29,9 +33,17 @@
             <div class="logo">
 
                 <!-- Logo billede -->
-                <img src="img/logo.png" alt="LA logo">
+                 <a href="#">
+                  <img src="img/logo1.png" alt="LA logo">
+                  </a>
+                
 
             </div>
+
+             <!-- ================= CHECKBOX ====================== -->
+
+    <!-- Skjult checkbox der styrer dropdown-menuen -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
 
             <!-- Navigation -->
             <nav>
@@ -40,13 +52,13 @@
                 <ul class="nav-links">
 
                     <!-- Portfolio -->
-                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
 
                     <!-- Om mig -->
-                    <li><a href="#">Lær mig at kende</a></li>
+                    <li><a href="#about">Lær mig at kende</a></li>
 
                     <!-- Kontakt -->
-                    <li><a href="#">Kontakt mig</a></li>
+                    <li><a href="#contact">Kontakt mig</a></li>
 
                 </ul>
 
@@ -54,6 +66,9 @@
 
             <!-- Hamburger menu -->
             <div class="hamburger">
+
+                <!-- Label bruges til at aktivere checkbox -->
+                <label for="menu-toggle" class="hamburger">
 
                 <!-- Streg 1 -->
                 <span></span>
@@ -63,6 +78,8 @@
 
                 <!-- Streg 3 -->
                 <span></span>
+
+                </label>
 
             </div>
 
@@ -93,58 +110,278 @@
                 <div class="hero-image">
 
                     <!-- Portræt billede -->
-                    <img src="img/mig.png" alt="Laura Amalie">
+                    <img src="img/migintro.png" alt="Laura Amalie">
 
                 </div>
 
             </section>
 
-            <!-- ================= PORTFOLIO SECTION ================= -->
-            <section class="portfolio-grid">
+<!-- ================================================= -->
+<!-- ================= PORTFOLIO SECTION ============= -->
+<!-- ================================================= -->
 
-                <!-- Produktbilleder -->
-                <article class="m1">
-                    <img src="img/produktbillede1.jpg" alt="Produktbilleder">
-                    <h2>Produktbilleder</h2>
-                </article>
+<section class="portfolio-grid" id="portfolio">
 
-                <!-- Zoo projekt -->
-                <article class="m2">
-                    <img src="img/flyer.png" alt="zoo flyer">
-                    <h2>Design til installationsprojekt for Odense Zoo</h2>
-                </article>
+    <!-- Produktbilleder -->
+    <article class="m1" id="produktbilleder">
 
-                <!-- Kunstnær -->
-                <article class="m3">
-                    <img src="img/kunstnaer.png" alt="kunstnaer">
-                    <h2>Content for Cafe Kunstnær</h2>
-                </article>
+        <!-- Åbner produkt-modal -->
+        <a href="#produkt-modal" class="portfolio-card">
+            <img src="img/produktbillede1.jpg" alt="Produktbilleder">
+            <h2>Produktbilleder</h2>
+        </a>
 
-                <!-- CS -->
-                <article class="m4">
-                    <img src="img/CS.png" alt="CS">
-                    <h2>Content for Creatve Space</h2>
-                </article>
+    </article>
 
-                <!-- Pentool -->
-                <article class="m5">
-                    <img src="img/pentool1.png" alt="Pentool portrait">
-                    <h2>Pentool portrait</h2>
-                </article>
+    <!-- Zoo projekt -->
+    <article class="m2" id="zooprojekt">
 
-                <!-- Moving art -->
-                <article class="m6">
-                    <img src="img/movingart.png" alt="moving art">
-                    <h2>Moving art</h2>
-                </article>
+        <!-- Åbner zoo-modal -->
+        <a href="#zoo-modal" class="portfolio-card">
+            <img src="img/flyer1.png" alt="Zoo flyer">
+            <h2>Design til installationsprojekt for Odense Zoo</h2>
+        </a>
 
-            </section>
+    </article>
+
+    <!-- Kunstnær -->
+    <article class="m3" id="kunstnaer">
+
+        <!-- Åbner kunstnaer-modal -->
+        <a href="#kunstnaer-modal" class="portfolio-card">
+            <img src="img/kunstnaer.png" alt="Kunstnær">
+            <h2>Content for Cafe Kunstnær</h2>
+        </a>
+
+    </article>
+
+    <!-- Creative Space -->
+    <article class="m4" id="creativespace">
+
+        <!-- Åbner cs-modal -->
+        <a href="#cs-modal" class="portfolio-card">
+            <img src="img/CS.png" alt="Creative Space">
+            <h2>Content for Creative Space</h2>
+        </a>
+
+    </article>
+
+    <!-- Pentool -->
+    <article class="m5" id="pentool">
+
+        <!-- Åbner pentool-modal -->
+        <a href="#pentool-modal" class="portfolio-card">
+            <img src="img/pentool1.png" alt="Pentool portrait">
+            <h2>Pentool portrait</h2>
+        </a>
+
+    </article>
+
+    <!-- Moving art -->
+    <article class="m6" id="movingart">
+
+        <!-- Åbner movingart-modal -->
+        <a href="#movingart-modal" class="portfolio-card">
+            <img src="img/movingart.png" alt="Moving art">
+            <h2>Moving art</h2>
+        </a>
+
+    </article>
+
+</section>
+
+<!-- ================================================= -->
+<!-- ================= PRODUKTBILLEDER MODAL ========= -->
+<!-- ================================================= -->
+
+<section id="produkt-modal" class="modal">
+    <div class="modal-box">
+
+        <!-- Lukker modal -->
+        <a href="#produktbilleder" class="modal-back">Tilbage til portfolio</a>
+
+        <h2>Produktbilleder</h2>
+
+        <div class="modal-images1">
+            <img src="img/produktbillede1.jpg" alt="Produktbillede 1">
+            <img src="img/produktbillede2.jpg" alt="Produktbillede 2">
+        </div>
+
+        <p>
+            I løbet af 1. semester har vi arbejdet med fotografering, hvor vi har haft fokus på portrætbillede og særligt produktbilleder. Her har jeg erfaret mig en masse viden om lys, indstilling af kamera, komposition og vinkler. Her har jeg endvidere også opbygget erfaring indenfor billedredigering i Adobe Photoshop og Adobe Lightroom.
+            <br>
+            <br>
+            Tilegnet erfaring: Kameraindstilling, lys, billederedigering
+
+        </p>
+
+    </div>
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- ================= ZOO MODAL ===================== -->
+<!-- ================================================= -->
+
+<section id="zoo-modal" class="modal">
+    <div class="modal-box">
+
+        <a href="#zooprojekt" class="modal-back">Tilbage til portfolio</a>
+
+        <h2>Odense Zoo projekt</h2>
+
+        <div class="modal-images2">
+            <img src="img/flyer1.png" alt="Zoo flyer">
+            <img src="img/Prototype.png" alt="Zoo projekt">
+        </div>
+
+        <p>
+            På første semester har vi haft en projekt, i samarbejde med Odense Zoo, hvor opgaven var at designe og udvikle et interaktivt installationsprojekt i den afrikanske fuglevoliere. Installationen skulle kunne formidle information omkring dyrene, trække opmærksomhed samt give de besøgende noget information, som de evt kunne tage med hjem, og bruge i hverdagen, for at forlænge oplevelsen.
+            I projektet lavede vi i min studiegruppe et koncept, hvor man via spil og leg, skulle lære fuglenes spisevaner at kende. Her udviklede vi i fællesskab ideen, men jeg var primære torvholder på at designe skitse, designe den endelige prototype og designe flyeren, som skulle formidle information om vores koncept, til folkene fra Odense Zoo
+            <br>
+            <br>
+            Tilegnet erfaring: Designe low-fi og hi-fi prototype, designe flyer, skabe et koncept
+
+        </p>
+
+    </div>
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- ================= KUNSTNÆR MODAL =============== -->
+<!-- ================================================= -->
+
+<section id="kunstnaer-modal" class="modal">
+    <div class="modal-box">
+
+        <a href="#kunstnaer" class="modal-back">Tilbage til portfolio</a>
+
+        <h2>Content for Cafe Kunstnær</h2>
+
+        <div class="modal-images3">
+            <video controls>
+            <source src="vid/kunstnaer.mp4" type="video/mp4">
+            </video>
+
+            <video controls>
+            <source src="vid/kunstnaerblomst.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        <p>
+            Ved siden af mit studie har jeg tilbudt min frivillige hjælp til den nyopstartede Café Kunstnær, som kombinerer caféoplevelser med flere forskellige kreative aktiviteter og projekter for gæsterne. Her har jeg bidraget med idéudvikling, konceptarbejde og produktion af digitalt content med fokus på at styrke caféens digitale identitet samt øge kendskabet til cafeen blandt målgruppen.
+            <br>
+            <br>
+            Tilegnet erfaring: Skyde content, billederedigering, videoredigering 
+
+        </p>
+
+    </div>
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- ================= CREATIVE SPACE MODAL ========== -->
+<!-- ================================================= -->
+
+<section id="cs-modal" class="modal">
+    <div class="modal-box">
+
+        <a href="#creativespace" class="modal-back">Tilbage til portfolio</a>
+
+        <h2>Content for Creative Space</h2>
+
+        <div class="modal-images4">
+            <img src="img/CS.png" alt="Creative Space billede 1">
+            <img src="img/CS udenfor.png" alt="Creative Space billede 2">
+        </div>
+
+        <p>
+            Creative Space er en kreamik cafe, hvor man kan kombinere den traditionelle cafeoplvelse, med at male på keramik. Jeg har arbejdet som butiksansat i flere år, men sideløbende med dette, har jeg hjulpet virksomheden med at tage produktbilleder, og andet content til deres sociale medier, og hjemmeside, for at øge interessen og inspirere gæster til at komme og være kreative, uanset erfaring, alder og interesser.
+            <br>
+            <br>
+            Tilegnet erfaring: Fotografering, opfgange stemning, vinkler og billederedigering
+
+        </p>
+
+    </div>
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- ================= PENTOOL MODAL ================= -->
+<!-- ================================================= -->
+
+<section id="pentool-modal" class="modal">
+    <div class="modal-box">
+
+        <a href="#pentool" class="modal-back">Tilbage til portfolio</a>
+
+        <h2>Pentool portrait</h2>
+
+        <div class="modal-images5">
+            <img src="img/pentool1.png" alt="Pentool portrait 1">
+            <img src="img/pentool2.png" alt="Pentool portrait 2">
+        </div>
+
+        <p>
+        I forbindelse med 1. semester arbejdede vi med Pen Tool i Adobe Illustrator, hvor vi fik en frivillig hjemmeopgave. Opgaven bestod i at skabe et selvportræt ud fra et fotografi ved hjælp af vektortegning og præcisionsarbejde i Illustrator.
+        Projektet gav mig mulighed for at udvikle mine kreative evner inden for visuel identitet, detaljearbejde og produktion af unikt digitalt indhold. Samtidig styrkede det min forståelse for, hvordan illustration og grafiske virkemidler kan bruges til at skabe et personligt og iøjnefaldende visuelt udtryk.
+        <br>
+        <br>
+        Tilegnet erfaring: Kreativ formidling, kreative evner, produktion af unikt og anderledes indhold
+        </p>
+
+    </div>
+</section>
+
+
+
+<!-- ================================================= -->
+<!-- ================= MOVING ART MODAL ============== -->
+<!-- ================================================= -->
+
+<section id="movingart-modal" class="modal">
+    <div class="modal-box">
+
+        <a href="#movingart" class="modal-back">Tilbage til portfolio</a>
+
+        <h2>Moving art</h2>
+
+        <div class="modal-images6">
+
+            <img src="img/movingart.png" alt="movingart">
+
+            <video controls>
+            <source src="vid/MovingArt-workshopEndelig-kopi.mp4" type="video/mp4">
+            </video>
+
+         </div>
+
+        <p>
+            I forbindelse med workshoppen Moving Art & Animation arbejdede vi med at vække et valgfrit maleri til live gennem animation og visuel storytelling. Formålet var at bruge egen kreativitet og fortolkning til at skabe bevægelse, stemning og narrativ i et ellers stillestående værk.
+            Workshoppen gav mig indsigt i, hvordan animation og moving art kan bruges som et stærkt visuelt kommunikationsværktøj i contentproduktion. Ved at kombinere billeder, bevægelse og fortælling kan man skabe mere engagerende og stemningsfuldt indhold, der fanger modtagerens opmærksomhed og styrker den følelsesmæssige forbindelse til et brand.
+            I relation til caféer har moving art særligt potentiale, fordi caféoplevelser ofte handler om atmosfære, mennesker og små fortællinger i hverdagen. Animeret content kan derfor bruges til at formidle stemning, identitet og kreativitet på en mere levende og sanselig måde, hvilket kan styrke caféens visuelle udtryk og skabe større interesse på digitale platforme som Instagram og TikTok.
+            <br>
+            <br>
+            Tilegnet erfaring: Storytelling, unikt og anderledes indhold, kreativ formidling
+
+        </p>
+
+    </div>
+</section>
             
-            <!-- ================================================= -->
+<!-- ================================================= -->
 <!-- ================= OM MIG SECTION ================ -->
 <!-- ================================================= -->
 
-<section class="about-section">
+<section class="about-section" id="about">
 
     <!-- Overskrift -->
     <h2>LÆR MIG AT KENDE</h2>
@@ -190,7 +427,7 @@
         </div>
 
         <!-- Portræt billede -->
-        <img class="about-img" src="img/mig.png" alt="Laura Amalie">
+        <img class="about-img" src="img/lærmigatkende.png" alt="Laura Amalie">
 
     </div>
 
@@ -198,36 +435,38 @@
     <div class="program-icons">
 
         <!-- CSS ikon -->
-        <img src="img/css.png" alt="CSS">
+        <img src="img/CSS3_logo_and_wordmark.svg.png" alt="CSS">
 
         <!-- HTML ikon -->
-        <img src="img/html.png" alt="HTML">
+        <img src="img/HTML5_logo_and_wordmark.svg.png" alt="HTML">
 
         <!-- Figma ikon -->
-        <img src="img/figma.png" alt="Figma">
+        <img src="img/Figma-logo.svg.png" alt="Figma">
 
         <!-- VS Code ikon -->
-        <img src="img/vscode.png" alt="Visual Studio Code">
+        <img src="img/Visual_Studio_Code_1.35_icon.svg.png" alt="Visual Studio Code">
 
         <!-- WordPress ikon -->
-        <img src="img/wordpress.png" alt="WordPress">
+        <img src="img/WordPress_blue_logo.svg.png" alt="WordPress">
 
         <!-- Photoshop ikon -->
-        <img src="img/photoshop.png" alt="Photoshop">
+        <img src="img/Adobe_Photoshop_CC_2026_icon.svg.png" alt="Photoshop">
 
         <!-- After Effects ikon -->
-        <img src="img/aftereffects.png" alt="After Effects">
+        <img src="img/Adobe_After_Effects_CC_icon.svg.png" alt="After Effects">
 
         <!-- Premiere Pro ikon -->
-        <img src="img/premierepro.png" alt="Premiere Pro">
+        <img src="img/Adobe_Premiere_Pro_CC_2026_icon.svg.png" alt="Premiere Pro">
 
         <!-- Illustrator ikon -->
-        <img src="img/illustrator.png" alt="Illustrator">
+        <img src="img/Adobe_Illustrator_CC_icon.svg.png" alt="Illustrator">
 
     </div>
 
     <!-- Logo nederst -->
-    <img class="about-logo" src="img/logo.png" alt="LA logo">
+     <a href="#">
+        <img class="about-logo" src="img/logo1.png" alt="LA logo">
+     </a>
 
 </section>
 
@@ -237,10 +476,10 @@
 <!-- ================= KONTAKT SECTION =============== -->
 <!-- ================================================= -->
 
-<section class="contact-section">
+<section class="contact-section" id="contact">
 
     <!-- Overskrift -->
-    <h2>Kontakt</h2>
+    <h2>Kontakt mig</h2>
 
     <!-- Kontakt indhold -->
     <div class="contact-content">
@@ -258,10 +497,15 @@
         <div class="contact-info">
 
             <!-- Telefonnummer -->
-            <p>Telefon: <br> +45 40 11 17 32</p>
+             <a href="sms:+4540111732" class="contact-box">
+            Telefon: +45 40 11 17 32
+            
+            </a>
 
-            <!-- Mail -->
-            <p>Mail: <br> Lajn80758@edu.ucl.dk</p>
+            <!---- Mail -->
+            <a href="mailto:lajn80758@edu.ucl.dk" class="contact-box">
+            Mail: Lajn80758@edu.ucl.dk
+            </a>
 
         </div>
 
@@ -278,33 +522,36 @@
 <footer class="footer">
 
     <!-- Footer logo -->
-    <img class="footer-logo" src="img/logo.png" alt="LA logo">
-
+      <a href="#">
+        <img class="footer-logo" src="img/logo1.png" alt="LA logo">
+    </a>
+    
     <!-- Lokation -->
     <div>
 
         <!-- Overskrift -->
-        <h3>Lokation:</h3>
-
-        <!-- Adresse -->
-        <p>
-            5000, Odense C <br>
+        <h3>Lokation:
+            <br>
+            <br>
+            <br>
+            5000, Odense C
+            <br>
             Danmark
-        </p>
-
+        </h3>
     </div>
 
     <!-- Kontakt -->
     <div>
 
         <!-- Overskrift -->
-        <h3>Kontakt mig:</h3>
-
-        <!-- Kontakt info -->
-        <p>
-            +45 40 11 17 32 <br>
+        <h3>Kontakt mig:
+            <br>
+            <br>
+            <br>
+            +45 40 11 17 32 
+            <br>
             Lajn80758@edu.ucl.dk
-        </p>
+        </h3>
 
     </div>
 
@@ -312,10 +559,14 @@
     <div class="socials">
 
         <!-- Instagram -->
-        <img src="img/instagram.png" alt="Instagram">
+         <a href="https://www.instagram.com/lakreala?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+        <i class="lab la-instagram"></i>
+        </a>
 
         <!-- LinkedIn -->
-        <img src="img/linkedin.png" alt="LinkedIn">
+         <a href="www.linkedin.com/in/laura-amalie-johansen-nielsen-49a469227">
+        <i class="lab la-linkedin"></i>
+        </a>
 
     </div>
 

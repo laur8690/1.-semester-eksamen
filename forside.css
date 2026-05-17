@@ -1,3 +1,8 @@
+/* ========================================== */
+/* ================= MOBILE ================= */
+/* ========================================== */
+
+
 /* ================================================= */
 /* ================= RESET ========================= */
 /* ================================================= */
@@ -8,6 +13,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* ================================================= */
 /* ================= BODY ========================== */
 /* ================================================= */
@@ -16,17 +25,25 @@ body {
     /* Fjerner browserens standard luft */
     margin: 0;
 
-    /* Baggrundsbillede */
-    background-image: url(img/krylletpapir2.jpg);
+    /* Baggrundsbilleder: hele billedet øverst, udfyldning bagved */
+    background-image:
+        url(img/krylletpapir2.jpg),
+        url(img/krylletpapir2.jpg);
 
-    /* Viser hele baggrundsbilledet */
-    background-size: cover;
+    /* Viser hele billedet og udfylder det hvide område bagved */
+    background-size:
+        contain,
+        cover;
 
     /* Centrerer baggrunden */
-    background-position: center;
+    background-position:
+        center,
+        center;
 
     /* Baggrunden gentages ikke */
-    background-repeat: no-repeat;
+    background-repeat:
+        no-repeat,
+        no-repeat;
 
     /* Standard font */
     font-family: sans-serif;
@@ -39,8 +56,8 @@ body {
 .container {
 
     /* Luft i siderne */
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 /* ================================================= */
@@ -57,13 +74,61 @@ body {
     align-items: center;
 
     /* Gør navbaren lavere */
-    padding: 15px 20px;
+    padding: 22px 30px;
 
     /* Luft under navbar */
-    margin-bottom: 30px;
+    margin-bottom: 45px;
 
     /* Bruges til tape */
     position: relative;
+}
+
+/* Tape nederst venstre */
+.navbar::before {
+
+    /* Gør pseudo-element synligt */
+    content: "";
+
+    /* Tape størrelse */
+    width: 60px;
+    height: 16px;
+
+    /* Hvid tape */
+    background-color: white;
+
+    /* Placering */
+    position: absolute;
+
+    /* Nederst venstre hjørne */
+    left: -18px;
+    bottom: 10px;
+
+    /* Rotation */
+    transform: rotate(45deg);
+}
+
+/* Tape nederst højre */
+.navbar::after {
+
+    /* Gør pseudo-element synligt */
+    content: "";
+
+    /* Tape størrelse */
+    width: 60px;
+    height: 16px;
+
+    /* Hvid tape */
+    background-color: white;
+
+    /* Placering */
+    position: absolute;
+
+    /* Nederst højre hjørne */
+    right: -18px;
+    bottom: 10px;
+
+    /* Rotation */
+    transform: rotate(-45deg);
 }
 
 /* ================================================= */
@@ -73,6 +138,18 @@ body {
 .logo img {
     /* Logo størrelse på mobil */
     width: 45px;
+
+    margin-left: 10px;
+}
+
+/* ================================================= */
+/* ================= CHECKBOX ====================== */
+/* ================================================= */
+
+/* Skjuler checkbox */
+.menu-toggle {
+
+    display: none;
 }
 
 /* ================================================= */
@@ -98,7 +175,7 @@ body {
     /* Afstand mellem stregerne */
     gap: 5px;
 
-    cursor: pointer;
+    cursor:pointer;
 }
 
 /* De 3 hamburger-streger */
@@ -106,7 +183,76 @@ body {
     width: 28px;
     height: 4px;
 
+    margin-right: 10px;
+
     background-color: #0047d4;
+}
+
+/* ================================================= */
+/* ================= DROPDOWN MENU ================= */
+/* ================================================= */
+
+/* Når checkbox er checked */
+.menu-toggle:checked ~ nav .nav-links {
+
+    /* Vis menu */
+    display: flex;
+}
+
+
+/* Styling af dropdown */
+.nav-links {
+
+    /* Placering */
+    position: absolute;
+
+    top: 100%;
+
+    left: 50%;
+
+    /* Fylder hele navbar bredde */
+    width: 50%;
+
+    /* Baggrund */
+    background-color: #fdf6d8;
+
+    /* Links under hinanden */
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 20px;
+
+    /* Luft */
+    padding: 25px 0;
+
+    /* Sørger for menu ligger øverst */
+    z-index: 20;
+
+    list-style: none;
+
+    border-style:solid;
+
+    border-color:#ffa538;
+}
+
+/* ================================================= */
+/* ================= LINKS ========================= */
+/* ================================================= */
+
+.nav-links a {
+
+    /* Fjerner understregning */
+    text-decoration: none;
+
+    /* Blå farve */
+    color: #0047d4;
+
+    /* Fed tekst */
+    font-weight: bold;
+
+    /* Tekst størrelse */
+    font-size: 1.3rem;
 }
 
 /* ================================================= */
@@ -123,13 +269,59 @@ body {
     align-items: center;
 
     /* Luft indeni boksen */
-    padding: 35px 25px;
+    padding: 50px 40px;
 
     /* Luft under hero */
-    margin-bottom: 40px;
+    margin-bottom: 55px;
 
     /* Bruges til tape */
     position: relative;
+}
+
+/* Tape øverst højre */
+.hero::before {
+
+    content: "";
+
+    /* Tape størrelse */
+    width: 80px;
+    height: 14px;
+
+    /* Tape farve */
+    background-color: white;
+
+    /* Placering */
+    position: absolute;
+
+    /* Øverst højre */
+    right: -20px;
+    top: 10px;
+
+    /* Rotation */
+    transform: rotate(45deg);
+}
+
+/* Tape nederst venstre */
+.hero::after {
+
+    content: "";
+
+    /* Tape størrelse */
+    width: 80px;
+    height: 14px;
+
+    /* Tape farve */
+    background-color: white;
+
+    /* Placering */
+    position: absolute;
+
+    /* Nederst venstre */
+    left: -18px;
+    bottom: 10px;
+
+    /* Rotation */
+    transform: rotate(45deg);
 }
 
 /* ================================================= */
@@ -145,11 +337,13 @@ body {
 .hero-text h1 {
     color: #ffa538;
 
-    font-size: 2.3rem;
+    font-size: 2.1rem;
 
     line-height: 1;
 
     margin-bottom: 20px;
+
+    margin-right: 20px;
 }
 
 /* Beskrivelse */
@@ -161,6 +355,8 @@ body {
     font-weight: bold;
 
     line-height: 1.2;
+
+    margin-right: 20px;
 }
 
 /* ================================================= */
@@ -169,7 +365,11 @@ body {
 
 .hero-image img {
     /* Billedstørrelse på mobil */
-    width: 160px;
+    /* Gør billedet smallere */
+    width: 220px;
+
+    /* Beholder proportionerne */
+    height: auto;
 
     display: block;
 }
@@ -179,12 +379,71 @@ body {
 /* ================================================= */
 
 .portfolio-grid {
-    /* Mobile first: bokse under hinanden */
-    display: flex;
+    /* Gul/creme baggrund bag alle bokse */
+    background-color: #fdf6d8;
 
-    flex-direction: column;
+    /* Luft inde i den gule sektion */
+    padding: 55px 40px;
 
-    gap: 40px;
+    /* Luft over sektionen */
+    margin-top: 40px;
+
+    /* Portfolio i 2 kolonner */
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    /* Afstand mellem boksene */
+    gap: 55px;
+
+    /* Bruges til tape */
+    position: relative;
+}
+
+/* ================================================= */
+/* ================= TAPE ØVERST HØJRE ============= */
+/* ================================================= */
+
+.portfolio-grid::before {
+
+    content: "";
+
+    width: 80px;
+    height: 16px;
+
+    background-color: white;
+
+    position: absolute;
+
+    /* Placering */
+    right: -18px;
+    top: 12px;
+
+    /* Rotation */
+    transform: rotate(45deg);
+}
+
+/* ================================================= */
+/* ================= TAPE NEDERST VENSTRE ========== */
+/* ================================================= */
+
+.portfolio-grid::after {
+
+    content: "";
+
+    width: 80px;
+    height: 16px;
+
+    background-color: white;
+
+    position: absolute;
+
+    /* Placering */
+    left: -18px;
+    bottom: 12px;
+
+    /* Rotation */
+    transform: rotate(45deg);
 }
 
 /* ================================================= */
@@ -226,7 +485,7 @@ body {
 
 /* Tekst, hvis du stadig har h2 i boksene */
 .portfolio-grid h2 {
-    color: #0047d4;
+    color:#ffa538;
 
     font-size: 1.8rem;
 
@@ -240,8 +499,419 @@ body {
     transform: translate(-50%, -50%);
 }
 
+@media (max-width: 768px) {
+    .portfolio-grid {
+        /* Portfolio i én kolonne på mobil */
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ================================================= */
-/* ================= OM MIG SECTION ================ */
+/* ================= KLIKBART PORTFOLIO CARD ======= */
+/* ================================================= */
+
+.portfolio-card {
+
+    /* Gør hele portfolio-boksen klikbar */
+    display: block;
+
+    /* Fylder hele article */
+    width: 100%;
+    height: 100%;
+
+    /* Bruges til at placere h2 ovenpå billedet */
+    position: relative;
+
+    /* Fjerner link-streg */
+    text-decoration: none;
+
+    /* Smooth animation på overskriften */
+    transition: 0.3s ease;
+}
+
+/* Gør animation smooth */
+.portfolio-card img {
+
+    transition: 0.3s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
+
+/* ================================================= */
+/* ================= MODAL BAGGRUND ================ */
+/* ================================================= */
+
+.modal {
+
+    /* Modal er skjult som standard */
+    display: none;
+
+    /* Ligger fast ovenpå hele skærmen */
+    position: fixed;
+
+    /* Fylder hele browser-vinduet */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Mørk gennemsigtig baggrund */
+    background-color: rgba(0, 0, 0, 0.4);
+
+    /* Sørger for at modal ligger øverst */
+    z-index: 1000;
+
+    /* Luft rundt om boksen */
+    padding: 25px;
+}
+
+
+
+/* Når modalens id bliver aktivt */
+.modal:target {
+
+    /* Viser modal */
+    display: flex;
+
+    /* Centrerer modal vandret */
+    justify-content: center;
+
+    /* Centrerer modal lodret */
+    align-items: center;
+}
+
+
+
+/* ================================================= */
+/* ================= MODAL BOKS ==================== */
+/* ================================================= */
+
+.modal-box {
+
+    /* Creme baggrund */
+    background-color: #fdf6d8;
+
+    /* Bredde på mobil */
+    width: 90%;
+
+    /* Maks bredde på større skærme */
+    max-width: 1050px;
+
+    /* Maks højde */
+    height: 100%;
+
+    /* Scroll inde i modal hvis der er meget tekst */
+    overflow-y: auto;
+
+    /* Luft indeni */
+    padding: 20px;
+
+}
+
+
+
+/* ================================================= */
+/* ================= TILBAGE-KNAP ================== */
+/* ================================================= */
+
+.modal-back {
+
+    /* Blå tekst */
+    color: #0047d4;
+
+    /* Fed tekst */
+    font-weight: bold;
+
+    /* Fjerner understregning */
+    text-decoration: none;
+
+    /* Tekststørrelse */
+    font-size: 1rem;
+
+    /* får det til at aligne med billeder og tekst */
+    margin-left: 10px;
+
+    /* Luft under */
+    padding-bottom: 20px;
+
+}
+
+/* Når musen holdes over knappen */
+.modal-back:hover {
+
+   text-decoration: underline;
+
+    /* Gør overgangen blød */
+    transition: 0.3s;
+}
+
+/* ================================================= */
+/* ================= MODAL OVERSKRIFT ============== */
+/* ================================================= */
+
+.modal-box h2 {
+
+    /* Orange overskrift */
+    color: #ffa538;
+
+    /* Størrelse */
+    font-size: 2rem;
+
+    /* Luft under overskrift */
+    margin-bottom: 20px;
+
+    /* får det til at aligne med billeder og tekst */
+    margin-left: 10px;
+
+    margin-top: 20px;
+
+}
+
+
+
+/* ================================================= */
+/* ============ MODAL BILLEDER PLACERING =========== */
+/* ================================================= */
+
+.modal-images1 {
+
+    /* Billeder ved siden af hinanden */
+    display: grid;
+
+    /* 2 kolonner */
+    grid-template-columns: 1fr 1fr;
+
+    justify-items: center;
+
+    /* Luft under billeder */
+    margin-bottom: 20px;
+}
+
+.modal-images2 {
+
+    /* Billeder ved siden af hinanden */
+    display: grid;
+
+    /* 2 kolonner */
+    grid-template-columns: 1fr 1fr;
+
+    justify-items: center;
+
+    /* Luft under billeder */
+    margin-bottom: 20px;
+
+}
+
+/* Videoer inde i Kunstnær modal */
+.modal-images3 {
+
+    /* Videoerne ved siden af hinanden */
+    display: grid;
+
+    /* 2 kolonner */
+    grid-template-columns: 1fr 1fr;
+
+    /* Luft mellem videoerne */
+    gap: 10px;
+
+    /* Centrerer videoerne */
+    justify-items: center;
+
+    /* Luft under videoerne */
+    margin-bottom: 20px;
+
+    
+}
+
+
+.modal-images4 {
+
+    /* Billeder ved siden af hinanden */
+    display: grid;
+
+    /* 2 kolonner */
+    grid-template-columns: 1fr 1fr;
+
+    justify-items: center;
+
+    /* Luft under billeder */
+    margin-bottom: 20px;
+}
+
+.modal-images5 {
+
+     /* Billeder ved siden af hinanden */
+    display: grid;
+
+    /* 2 kolonner */
+    grid-template-columns: 1fr 1fr;
+
+    justify-items: center;
+
+    /* Luft under billeder */
+    margin-bottom: 20px;
+}
+
+.modal-images6 {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    align-items: start;
+
+    margin-bottom: 20px;
+}
+
+/* ================================================= */
+/* =============== MODAL BILLEDER STR.============== */
+/* ================================================= */
+
+/* Billeder inde i modal1 */
+.modal-images1 img {
+
+    /* Fylder kolonnen */
+    width: 90%;
+
+    /* billedets faktiske højde */
+    height: 350px;
+
+    /* Viser hele billedet */
+    object-fit: cover;
+
+    /* transparent baggrund hvis billedet ikke loader */
+    background-color:transparent;
+}
+
+/* Billeder inde i modal2 */
+.modal-images2 img {
+
+/* Fylder kolonnen */
+    width: 90%;
+
+    /* højde */
+    height: 250px;
+
+    /* Viser hele billedet */
+    object-fit:cover;
+
+    /* transparent baggrund hvis billedet ikke loader */
+    background-color:transparent;
+
+}
+
+/* Selve videoerne */
+.modal-images3 video {
+
+    /* Fylder hver sin kolonne */
+    width: 90%;
+
+    /* Beholder proportioner */
+    height: 100%;
+
+
+    object-fit: cover;
+
+    background-color:#ffa538;
+}
+
+/* Billeder inde i modal4 */
+.modal-images4 img {
+
+    /* Fylder kolonnen */
+    width: 90%;
+
+    /* højde */
+    height: 350px;
+
+    /* Viser hele billedet */
+    object-fit:cover;
+
+    /* transparent baggrund hvis billedet ikke loader */
+    background-color:transparent;
+}
+
+/* Billeder inde i modal5 */
+.modal-images5 img {
+
+     /* Fylder kolonnen */
+    width: 90%;
+
+    /* højde */
+    height: 350px;
+
+    /* Viser hele billedet */
+    object-fit:cover;
+
+    /* transparent baggrund hvis billedet ikke loader */
+    background-color:transparent;
+}
+
+/* video inde i modal6 */
+.modal-images6 video {
+
+    /* Fylder kolonnen */
+    width: 70%;
+
+    /* højde */
+    height: auto;
+
+    /* Viser hele billedet */
+    object-fit:cover;
+
+    /* transparent baggrund hvis billedet ikke loader */
+    background-color:transparent;
+}
+
+/* billede inde i modal6 */
+.modal-images6 img {
+
+    /* Fylder kolonnen */
+    width: 70%;
+
+    /* højde */
+    height: auto;
+
+    /* Viser hele billedet */
+    object-fit:cover;
+
+    /* transparent baggrund hvis billedet ikke loader */
+    background-color:transparent;
+}
+
+
+/* ================================================= */
+/* ================= MODAL TEKST =================== */
+/* ================================================= */
+
+.modal-box p {
+
+    /* Brun tekst */
+    color: #3a1608;
+
+    /* Typewriter-look */
+    font-family: monospace;
+
+    /* Tekststørrelse */
+    font-size: 0.9rem;
+
+    /* Linjeafstand */
+    line-height: 1.4;
+
+    /* Luft under tekst */
+    margin-bottom: 15px;
+
+    padding-left: 10px;
+
+    padding-right: 10px;
+}
+
+/* ================================================= */
+/* ================= ABOUT SECTION ================= */
 /* ================================================= */
 
 .about-section {
@@ -250,17 +920,54 @@ body {
     background-color: #fdf6d8;
 
     /* Luft indeni */
-    padding: 35px 25px;
+    padding: 50px 40px;
 
     /* Luft over section */
-    margin-top: 50px;
+    margin-top: 65px;
 
     /* Luft under section */
-    margin-bottom: 60px;
+    margin-bottom: 75px;
 
     /* Bruges til tape */
     position: relative;
 }
+
+/* Tape øverst til venstre */
+.about-section::before {
+
+    content: "";
+
+    width: 80px;
+    height: 14px;
+
+    background-color: white;
+
+    position: absolute;
+
+    left: -15px;
+    top: 5px;
+
+    transform: rotate(-35deg);
+}
+
+/* Tape nederst til højre */
+.about-section::after {
+
+    content: "";
+
+    width: 80px;
+    height: 14px;
+
+    background-color: white;
+
+    position: absolute;
+
+    right: -15px;
+    bottom: 5px;
+
+    transform: rotate(-35deg);
+}
+
 
 /* Overskrift */
 .about-section h2 {
@@ -279,7 +986,9 @@ body {
 
     justify-content: space-between;
 
-    gap: 20px;
+    align-items: flex-start;
+
+    gap: 35px;
 }
 
 /* Tekst område */
@@ -300,14 +1009,15 @@ body {
     line-height: 1.1;
 
     margin-bottom: 18px;
+    
 }
 
 /* Portræt billede */
 .about-img {
 
-    width: 130px;
+    width: 200px;
 
-    height: 190px;
+    height: 250px;
 
     object-fit: cover;
 }
@@ -317,19 +1027,19 @@ body {
 
     display: flex;
 
-    gap: 8px;
+    gap: 15px;
+
+    justify-content: flex-start;
 
     margin-top: 25px;
-
-    flex-wrap: wrap;
 }
 
 /* Ikon størrelse */
 .program-icons img {
 
-    width: 18px;
+    width: 25px;
 
-    height: 18px;
+    height: 25px;
 
     object-fit: contain;
 }
@@ -343,6 +1053,8 @@ body {
 
     right: 30px;
     bottom: 25px;
+
+    padding-right: 10px;
 }
 
 
@@ -355,11 +1067,47 @@ body {
 
     background-color: #fdf6d8;
 
-    padding: 35px 25px;
+    padding: 50px 40px;
 
-    margin-bottom: 70px;
+    margin-bottom: 85px;
 
     position: relative;
+}
+
+/* Tape nederst venstre */
+.contact-section::before {
+
+    content: "";
+
+    width: 70px;
+    height: 14px;
+
+    background-color: white;
+
+    position: absolute;
+
+    left: -25px;
+    bottom: 10px;
+
+    transform: rotate(55deg);
+}
+
+/* Tape øverst højre */
+.contact-section::after {
+
+    content: "";
+
+    width: 70px;
+    height: 14px;
+
+    background-color: white;
+
+    position: absolute;
+
+    right: -25px;
+    top: 15px;
+
+    transform: rotate(55deg);
 }
 
 /* Overskrift */
@@ -379,7 +1127,9 @@ body {
 
     align-items: center;
 
-    gap: 20px;
+    justify-content: space-between;
+
+    gap: 40px;
 }
 
 /* Kontakt tekst */
@@ -400,10 +1150,24 @@ body {
 .contact-info {
 
     width: 50%;
+
+    /* Gør bokse under hinanden */
+    display: flex;
+
+    flex-direction: column;
+
+    /* Centrerer dem vandret */
+    align-items: flex-end;
+
+    /* Centrerer hele boks-gruppen i højre side */
+    justify-content: center;
+
+    /* 10px mellem bokse */
+    gap: 10px;
 }
 
 /* Kontakt bokse */
-.contact-info p {
+.contact-box {
 
     background-color: #e6e6e6;
 
@@ -413,11 +1177,24 @@ body {
 
     font-size: 0.8rem;
 
-    padding: 8px 10px;
+    padding: 12px 15px;
 
     border-radius: 6px;
 
-    margin-bottom: 10px;
+    width: fit-content;
+
+    max-width: 100%;
+
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+.contact-box:hover {
+
+    background-color: #d8d8d8;
+
+    transform: scale(1.02);
 }
 
 
@@ -430,7 +1207,7 @@ body {
 
     background-color: #fdf6d8;
 
-    padding: 30px 25px;
+    padding: 40px;
 
     display: flex;
 
@@ -440,23 +1217,67 @@ body {
 
     position: relative;
 
-    gap: 15px;
+    gap: 25px;
+}
+
+/* Tape venstre */
+.footer::before {
+
+    content: "";
+
+    width: 60px;
+    height: 14px;
+
+    background-color: white;
+
+    position: absolute;
+
+    left: -20px;
+    top: 5px;
+
+    transform: rotate(-55deg);
+}
+
+/* Tape højre */
+.footer::after {
+
+    content: "";
+
+    width: 60px;
+    height: 14px;
+
+    background-color: white;
+
+    position: absolute;
+
+    right: -25px;
+    top: 5px;
+
+    transform: rotate(55deg);
 }
 
 /* Footer logo */
 .footer-logo {
 
-    width: 55px;
+    width: 40px;
+
+    margin-bottom: 0px;
 }
 
 /* Footer overskrifter */
 .footer h3 {
 
+    display: flex;
+
     color: #0047d4;
 
     font-size: 0.9rem;
 
-    margin-bottom: 12px;
+    width: 130px;
+
+    margin-top: 0px;
+
+    margin-bottom: 0px;
 }
 
 /* Footer tekst */
@@ -471,20 +1292,332 @@ body {
     line-height: 1.3;
 }
 
+
 /* Sociale medier */
 .socials {
 
     display: flex;
 
-    gap: 8px;
+    /* Gør dem lodrette */
+    flex-direction: column;
 
-    align-self: flex-end;
+    /* Luft mellem ikoner */
+    gap: 3px;
+
+    /* Skubber dem mod højre */
+    margin-left: auto;
+
+    /* Centrerer ikonerne */
+    align-items: center;
 }
 
-/* Sociale medier ikoner */
-.socials img {
 
-    width: 18px;
+/* Insta ikon */
+.lab.la-instagram {
 
-    height: 18px;
+    font-size: 40px;
+
+    color: #0047d4;
+
+    object-fit: contain;
+
+}
+
+/* Linked in ikon */
+.lab.la-linkedin {
+
+    font-size: 40px;
+
+    color: #0047d4;
+
+    object-fit: contain;
+
+}
+
+.socials a {
+
+    text-decoration: none;
+
+    color: #0047d4;
+
+    
+}
+
+.socials a:hover {
+
+    transform: scale(1.09);
+}
+
+.footer-info {
+
+    width: 180px;
+}
+
+
+
+/* ========================================== */
+/* ================= DESKTOP ================ */
+/* ========================================== */
+
+
+@media (min-width: 768px) {
+
+    /* ================================================= */
+    /* ================= CONTAINER ===================== */
+    /* ================================================= */
+
+    .container {
+
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    /* ================================================= */
+    /* ================= NAVBAR ======================== */
+    /* ================================================= */
+
+    .navbar {
+
+        padding: 35px 60px;
+    }
+
+    /* Skjuler hamburger */
+    .hamburger {
+
+        display: none;
+    }
+
+    /* Viser desktop navigation */
+    .nav-links {
+
+        display: flex;
+
+        position: static;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        gap: 50px;
+
+        width: auto;
+
+        background-color: transparent;
+
+        border: none;
+
+        padding: 0;
+    }
+
+    /* Desktop links */
+    .nav-links a {
+
+        font-size: 1.1rem;
+    }
+
+    /* Logo større */
+    .logo img {
+
+        width: 60px;
+    }
+
+    /* ================================================= */
+    /* ================= HERO ========================== */
+    /* ================================================= */
+
+    .hero {
+
+        padding: 90px 80px;
+
+        margin-bottom: 90px;
+    }
+
+    .hero-text h1 {
+
+        font-size: 4rem;
+    }
+
+    .hero-text p {
+
+        font-size: 1.2rem;
+
+        line-height: 1.5;
+    }
+
+    .hero-image img {
+
+        width: 350px;
+    }
+
+    /* ================================================= */
+    /* ================= PORTFOLIO ===================== */
+    /* ================================================= */
+
+    .portfolio-grid {
+
+        grid-template-columns: repeat(3, 1fr);
+
+        padding: 90px 80px;
+    }
+
+    /* ================================================= */
+    /* =============== STØRRE MODAL BILLEDER =========== */
+    /* ================================================= */
+
+    .modal-images1 img,
+    .modal-images2 img,
+    .modal-images4 img,
+    .modal-images5 img {
+
+        /* Fylder mere på desktop */
+        width: 70%;
+
+        /* Gør billederne større */
+        height: 500px;
+
+        /* Beskærer pænt */
+        object-fit: cover;
+    }
+
+    /* Videoer større */
+    .modal-images3 video,
+    .modal-images6 video {
+
+        width: 35%;
+
+        height: auto;
+    }
+
+    /* ================================================= */
+    /* ================= ABOUT SECTION ================= */
+    /* ================================================= */
+
+    .about-section {
+
+        padding: 90px 80px;
+    }
+
+    /* Mere luft mellem tekst og billede */
+    .about-content {
+
+        gap: 80px;
+
+        align-items: flex-start;
+    }
+
+    /* Tekst */
+    .about-text {
+
+        width: 75%;
+    }
+
+    .about-text p {
+
+        font-size: 1rem;
+
+        line-height: 1.5;
+    }
+
+    /* Billede */
+    .about-img {
+
+        width: 320px;
+
+        height: 420px;
+
+        object-fit: cover;
+
+        display: block;
+
+        margin-left: auto;
+    }
+
+    /* Program ikoner */
+    .program-icons {
+
+        gap: 25px;
+
+        margin-top: 40px;
+    }
+
+    /* Større ikoner */
+    .program-icons img {
+
+        width: 40px;
+
+        height: 40px;
+    }
+
+    /* ================================================= */
+    /* ================= KONTAKT ======================= */
+    /* ================================================= */
+
+    .contact-section {
+
+        padding: 90px 80px;
+    }
+
+    .contact-content > p {
+
+        font-size: 1rem;
+
+        line-height: 1.5;
+
+        width: 75%;
+    }
+
+    .contact-box {
+
+        font-size: 1rem;
+
+        padding: 16px 22px;
+    }
+
+    /* ================================================= */
+    /* ================= FOOTER ======================== */
+    /* ================================================= */
+
+    .footer {
+
+        padding: 60px 80px;
+    }
+
+    .footer-logo {
+
+        width: 60px;
+    }
+
+    .footer h3 {
+
+        font-size: 1rem;
+    }
+
+    /* Sociale medier større */
+    .lab.la-instagram,
+    .lab.la-linkedin {
+
+        font-size: 50px;
+    }
+
+    /* ================================================= */
+    /* ================== TAPE ========================= */
+    /* ================================================= */
+
+    /* Tape stykker */
+    .navbar::before,
+    .navbar::after,
+    .hero::before,
+    .hero::after,
+    .portfolio-grid::before,
+    .portfolio-grid::after,
+    .about-section::before,
+    .about-section::after,
+    .contact-section::before,
+    .contact-section::after,
+    .footer::before,
+    .footer::after {
+
+        height: 20px;
+        width: 85px;
+    }
 }
