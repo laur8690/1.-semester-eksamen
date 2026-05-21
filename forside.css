@@ -276,6 +276,8 @@ body {
 
     /* Bruges til tape */
     position: relative;
+
+    overflow: visible;
 }
 
 /* Tape øverst højre */
@@ -330,27 +332,29 @@ body {
 
 .hero-text {
     /* Teksten fylder lidt over halvdelen */
-    width: 55%;
+    width: 45%;
 }
 
 /* Overskrift */
 .hero-text h1 {
     color: #ffa538;
 
-    font-size: 2.1rem;
+    font-size: 1.7rem;
 
     line-height: 1;
 
     margin-bottom: 20px;
 
     margin-right: 20px;
+
+    word-break: normal;
 }
 
 /* Beskrivelse */
 .hero-text p {
     color: #0047d4;
 
-    font-size: 0.9rem;
+    font-size: 0.75rem;
 
     font-weight: bold;
 
@@ -366,12 +370,16 @@ body {
 .hero-image img {
     /* Billedstørrelse på mobil */
     /* Gør billedet smallere */
-    width: 220px;
+    width: 170px;
 
     /* Beholder proportionerne */
     height: auto;
 
     display: block;
+}
+
+.hero-image {
+    width: 50%;
 }
 
 /* ================================================= */
@@ -764,8 +772,17 @@ body {
 
     align-items: start;
 
+
+    /* Centrerer hele grid'et */
+    justify-content: center;
+
+    /* Centrerer indholdet i hver kolonne */
+    justify-items: center;
+
     margin-bottom: 20px;
 }
+
+
 
 /* ================================================= */
 /* =============== MODAL BILLEDER STR.============== */
@@ -813,7 +830,6 @@ body {
     /* Beholder proportioner */
     height: 100%;
 
-
     object-fit: cover;
 
     background-color:#ffa538;
@@ -855,13 +871,14 @@ body {
 .modal-images6 video {
 
     /* Fylder kolonnen */
-    width: 70%;
+    width: 90%;
 
     /* højde */
     height: auto;
 
     /* Viser hele billedet */
     object-fit:cover;
+    
 
     /* transparent baggrund hvis billedet ikke loader */
     background-color:transparent;
@@ -871,7 +888,7 @@ body {
 .modal-images6 img {
 
     /* Fylder kolonnen */
-    width: 70%;
+    width: 90%;
 
     /* højde */
     height: auto;
@@ -984,17 +1001,19 @@ body {
 
     display: flex;
 
-    justify-content: space-between;
+    /* Én kolonne på mobil */
+    flex-direction: column;
 
+    /* Centrerer indhold */
     align-items: flex-start;
 
-    gap: 35px;
+    gap: 25px;
 }
 
 /* Tekst område */
 .about-text {
 
-    width: 55%;
+    width: 100%;
 }
 
 /* Tekst styling */
@@ -1015,21 +1034,28 @@ body {
 /* Portræt billede */
 .about-img {
 
-    width: 200px;
+    width: 250px;
 
-    height: 250px;
+    height: auto;
 
-    object-fit: cover;
+    /* order: -1; order: -1; */
+    order: -1;
+    
 }
 
 /* Program ikoner */
 .program-icons {
 
-    display: flex;
+    display: grid;
 
+    /* 5 kolonner */
+    grid-template-columns: repeat(5, 1fr);
+
+    /* Luft mellem ikoner */
     gap: 15px;
 
-    justify-content: flex-start;
+    /* Venstrestiller */
+    justify-items: start;
 
     margin-top: 25px;
 }
@@ -1037,9 +1063,9 @@ body {
 /* Ikon størrelse */
 .program-icons img {
 
-    width: 25px;
+    width: 35px;
 
-    height: 25px;
+    height: 35px;
 
     object-fit: contain;
 }
@@ -1047,7 +1073,7 @@ body {
 /* Logo nederst */
 .about-logo {
 
-    width: 55px;
+    width: 45px;
 
     position: absolute;
 
@@ -1125,17 +1151,16 @@ body {
 
     display: flex;
 
-    align-items: center;
+    /* Én kolonne */
+    flex-direction: column;
 
-    justify-content: space-between;
-
-    gap: 40px;
+    gap: 25px;
 }
 
 /* Kontakt tekst */
 .contact-content > p {
 
-    width: 50%;
+    width: 100%;
 
     color: #3a1608;
 
@@ -1149,12 +1174,12 @@ body {
 /* Kontakt info */
 .contact-info {
 
-    width: 50%;
+    width: 100%;
 
     /* Gør bokse under hinanden */
     display: flex;
 
-    flex-direction: column;
+    flex-direction: row;
 
     /* Centrerer dem vandret */
     align-items: flex-end;
@@ -1188,7 +1213,11 @@ body {
     text-decoration: none;
 
     transition: 0.2s;
+
+    flex: 1
+
 }
+
 
 .contact-box:hover {
 
@@ -1207,7 +1236,7 @@ body {
 
     background-color: #fdf6d8;
 
-    padding: 40px;
+    padding: 25px 20px;
 
     display: flex;
 
@@ -1217,7 +1246,7 @@ body {
 
     position: relative;
 
-    gap: 25px;
+    gap: 15px;
 }
 
 /* Tape venstre */
@@ -1271,9 +1300,9 @@ body {
 
     color: #0047d4;
 
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 
-    width: 130px;
+    width: auto;
 
     margin-top: 0px;
 
@@ -1287,7 +1316,7 @@ body {
 
     font-weight: bold;
 
-    font-size: 0.75rem;
+    font-size: 0.68rem;
 
     line-height: 1.3;
 }
@@ -1315,7 +1344,7 @@ body {
 /* Insta ikon */
 .lab.la-instagram {
 
-    font-size: 40px;
+    font-size: 32px;
 
     color: #0047d4;
 
@@ -1326,7 +1355,7 @@ body {
 /* Linked in ikon */
 .lab.la-linkedin {
 
-    font-size: 40px;
+    font-size: 32px;
 
     color: #0047d4;
 
@@ -1350,7 +1379,7 @@ body {
 
 .footer-info {
 
-    width: 180px;
+    width: 120px;
 }
 
 
@@ -1432,10 +1461,17 @@ body {
         margin-bottom: 90px;
     }
 
-    .hero-text h1 {
+   .hero-text h1 {
 
-        font-size: 4rem;
-    }
+    font-size: 4rem;
+
+    line-height: 0.95;
+
+    display: inline-block;
+
+    width: 600px;
+}
+
 
     .hero-text p {
 
@@ -1447,6 +1483,9 @@ body {
     .hero-image img {
 
         width: 350px;
+
+        margin-left: 32%;
+
     }
 
     /* ================================================= */
@@ -1479,11 +1518,42 @@ body {
         object-fit: cover;
     }
 
-    /* Videoer større */
-    .modal-images3 video,
-    .modal-images6 video {
+    /* Container */
+.modal-images6 {
 
-        width: 35%;
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 40px;
+
+    justify-items: center;
+
+    align-items: start;
+
+    margin-bottom: 20px;
+}
+
+/* Billede + video samme størrelse */
+.modal-images6 img,
+.modal-images6 video {
+
+    width: 100%;
+
+    max-width: 380px;
+
+    height: 560px;
+
+    object-fit: cover;
+
+    display: block;
+}
+    
+
+    /* Videoer større */
+    .modal-images3 video{
+        
+        width: 70%;
 
         height: auto;
     }
@@ -1498,17 +1568,28 @@ body {
     }
 
     /* Mere luft mellem tekst og billede */
-    .about-content {
+   .about-content {
 
-        gap: 80px;
+    display: grid;
 
-        align-items: flex-start;
-    }
+    /* tekst + billede ved siden af hinanden */
+    grid-template-columns: 1.5fr 1fr;
+
+    align-items: start;
+
+    /* Tekst først, billede sidst */
+    grid-template-areas: 
+    "text image";
+
+    gap: 60px;
+}
 
     /* Tekst */
     .about-text {
 
-        width: 75%;
+        grid-area: text;
+
+        width: 100%;
     }
 
     .about-text p {
@@ -1521,57 +1602,92 @@ body {
     /* Billede */
     .about-img {
 
-        width: 320px;
+        grid-area: image;
 
-        height: 420px;
+        width: 100%;
+
+        max-width: 360px;
+
+        height: 480px;
 
         object-fit: cover;
 
-        display: block;
-
-        margin-left: auto;
-    }
+        justify-self: end;
+}
 
     /* Program ikoner */
-    .program-icons {
+    /* Program ikoner desktop */
+.program-icons {
 
-        gap: 25px;
+    display: flex;
 
-        margin-top: 40px;
-    }
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    gap: 20px;
+
+    margin-top: 40px;
+}
 
     /* Større ikoner */
     .program-icons img {
 
-        width: 40px;
+    width: 45px;
+    height: 45px;
 
-        height: 40px;
-    }
+    object-fit: contain;
+}
 
     /* ================================================= */
     /* ================= KONTAKT ======================= */
     /* ================================================= */
 
-    .contact-section {
+   /* Kontakt layout desktop */
+/* Kontakt layout desktop */
+.contact-content {
+    display: grid;
 
-        padding: 90px 80px;
-    }
+    grid-template-columns: 60% 30%;
 
-    .contact-content > p {
+    column-gap: 160px;
 
-        font-size: 1rem;
+    align-items: flex-start;
+}
 
-        line-height: 1.5;
+.contact-content > p {
+    width: 100%;
 
-        width: 75%;
-    }
+    font-size: 1rem;
 
-    .contact-box {
+    line-height: 1.5;
+}
 
-        font-size: 1rem;
+.contact-info {
+    width: 100%;
 
-        padding: 16px 22px;
-    }
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin-left: 0;
+}
+
+.contact-box {
+    font-size: 1rem;
+
+    padding: 22px 28px;
+
+    min-width: 240px;
+
+    border-radius: 8px;
+}
 
     /* ================================================= */
     /* ================= FOOTER ======================== */
