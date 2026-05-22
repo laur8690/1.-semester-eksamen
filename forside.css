@@ -337,6 +337,8 @@ body {
 
     justify-self: start;
 
+    width: 100%;
+
 }
 
 /* Overskrift */
@@ -376,19 +378,20 @@ body {
 
 .hero-image img {
     /* Billedstørrelse på mobil */
-    /* Gør billedet smallere */
     width: 140px;
 
     /* Beholder proportionerne */
     height: auto;
 
-    margin-left: auto;
+    display: block;
+
+    margin-left: 0;
 }
 
 .hero-image {
-    width: 50%;
+    width: 100%;
 
-    justify-self: start;
+    justify-self: end;
 }
 
 /* ================================================= */
@@ -1067,6 +1070,8 @@ body {
 
     height: auto;
 
+    align-self: center;
+
     /* order: -1; order: -1; */
     order: -1;
     
@@ -1321,7 +1326,7 @@ body {
 /* Footer logo */
 .footer-logo {
 
-    width: 40px;
+    width: 30px;
 
     margin-bottom: 0px;
 }
