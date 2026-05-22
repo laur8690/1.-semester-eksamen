@@ -1541,7 +1541,7 @@ body {
     display: inline-block;
 
     width: 600px;
-}
+    }
 
 
     .hero-text p {
@@ -1574,6 +1574,10 @@ body {
     /* =============== STØRRE MODAL BILLEDER =========== */
     /* ================================================= */
 
+    .modal {
+        padding: 25px;
+    }
+
     .modal-images1 img,
     .modal-images2 img,
     .modal-images4 img,
@@ -1603,7 +1607,7 @@ body {
     align-items: start;
 
     margin-bottom: 20px;
-}
+    }
 
 /* Billede + video samme størrelse */
 .modal-images6 img,
@@ -1618,7 +1622,7 @@ body {
     object-fit: cover;
 
     display: block;
-}
+    }
     
 
     /* Videoer større */
@@ -1654,7 +1658,7 @@ body {
 
     gap: 60px;
     
-}
+    }
 
     /* Tekst */
     .about-text {
@@ -1685,11 +1689,11 @@ body {
         object-fit: cover;
 
         justify-self: end;
-}
+    }
 
     /* Program ikoner */
     /* Program ikoner desktop */
-.program-icons {
+    .program-icons {
 
     display: flex;
 
@@ -1702,7 +1706,7 @@ body {
     gap: 20px;
 
     margin-top: 40px;
-}
+    }
 
     /* Større ikoner */
     .program-icons img {
@@ -1711,15 +1715,21 @@ body {
     height: 45px;
 
     object-fit: contain;
-}
+    }
 
     /* ================================================= */
     /* ================= KONTAKT ======================= */
     /* ================================================= */
 
-   /* Kontakt layout desktop */
-/* Kontakt layout desktop */
-.contact-content {
+   .contact-section {
+    padding: 60px 40px;
+
+    margin-top: 65px;
+
+    margin-bottom: 75px;
+   }
+    /* Kontakt layout desktop */
+    .contact-content {
     display: grid;
 
     grid-template-columns: 1.5fr 1fr;
@@ -1730,22 +1740,22 @@ body {
 
     padding-left: 40px;
     
-}
+    }
 
-.contact-section h2 {
+    .contact-section h2 {
 
     padding-left: 40px;
-}
+    }
 
-.contact-content > p {
+    .contact-content > p {
     width: 100%;
 
     font-size: 1rem;
 
     line-height: 1.5;
-}
+    }
 
-.contact-info {
+    .contact-info {
     width: 100%;
 
     display: flex;
@@ -1758,35 +1768,66 @@ body {
 
     gap: 25px;
     
-}
+    }
 
-.contact-box {
+    .contact-box {
     font-size: 1rem;
 
-    padding: 22px 28px;
+    padding: 20px 40px;
 
     min-width: 240px;
 
     border-radius: 8px;
-}
+    }
 
     /* ================================================= */
     /* ================= FOOTER ======================== */
     /* ================================================= */
 
-    .footer {
 
-        padding: 60px 80px;
+
+    .footer {
+        display: grid;
+
+        grid-template-columns: auto 1fr 1fr auto;
+
+        align-items: center;
+
+        gap: 30px;
+
+        padding: 45px 60px;
     }
 
-    .footer-logo {
+    .footer-lokationtekst {
+        grid-column: 2;
+        grid-row: 1;
 
-        width: 60px;
+        justify-self: start;
+        text-align: left;
+    }
+
+    .footer-kontakttekst {
+        grid-column: 2;
+        grid-row: 1;
+
+        justify-self: end;
+        text-align: left;
+
+        margin-top: 0;
+    }
+
+    .socials {
+        grid-column: 4;
+        grid-row: 1;
+
+        justify-self: end;
+        align-self: center;
     }
 
     .footer h3 {
-
-        font-size: 1rem;
+        font-size: 1.15rem;
+        line-height: 1.5;
+        margin: 0;
     }
 
     /* Sociale medier større */
@@ -1794,6 +1835,13 @@ body {
     .lab.la-linkedin {
 
         font-size: 50px;
+    }
+
+    /* Footer logo */
+    .footer-logo {
+
+    width: 60px;
+
     }
 
     /* ================================================= */
