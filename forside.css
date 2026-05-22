@@ -1274,17 +1274,19 @@ body {
 
     background-color: #fdf6d8;
 
-    padding: 25px 20px;
+    padding: 35px 25px;
 
-    display: flex;
+    height: auto;
 
-    align-items: center;
+    display: grid;
 
-    justify-content: space-between;
+    grid-template-columns: 1fr auto;
+
+    align-items: start;
 
     position: relative;
 
-    gap: 15px;
+    gap: 25px;
 }
 
 /* Tape venstre */
@@ -1334,7 +1336,6 @@ body {
 /* Footer overskrifter */
 .footer h3 {
 
-    display: flex;
 
     color: #0047d4;
 
@@ -1342,9 +1343,8 @@ body {
 
     width: auto;
 
-    margin-top: 0px;
+    margin: 0 0 6px 0;
 
-    margin-bottom: 0px;
 }
 
 /* Footer tekst */
@@ -1357,6 +1357,10 @@ body {
     font-size: 0.68rem;
 
     line-height: 1.3;
+
+    margin: 0;
+
+    word-break: word-break;
 }
 
 
@@ -1417,7 +1421,13 @@ body {
 
 .footer-info {
 
-    width: 120px;
+    width: 100px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
 }
 
 
