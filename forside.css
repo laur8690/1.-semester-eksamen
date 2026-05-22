@@ -1407,7 +1407,7 @@ body {
 
     .navbar {
 
-        padding: 35px 60px;
+        padding: 35px 80px;
     }
 
     /* Skjuler hamburger */
@@ -1482,9 +1482,9 @@ body {
 
     .hero-image img {
 
-        width: 350px;
+        justify-self: end;
 
-        margin-left: 32%;
+        width: 350px;
 
     }
 
@@ -1582,6 +1582,7 @@ body {
     "text image";
 
     gap: 60px;
+    
 }
 
     /* Tekst */
@@ -1650,11 +1651,19 @@ body {
 .contact-content {
     display: grid;
 
-    grid-template-columns: 60% 30%;
+    grid-template-columns: 1.5fr 1fr;
 
     column-gap: 160px;
 
     align-items: flex-start;
+
+    padding-left: 40px;
+    
+}
+
+.contact-section h2 {
+
+    padding-left: 40px;
 }
 
 .contact-content > p {
@@ -1672,11 +1681,12 @@ body {
 
     flex-direction: column;
 
-    align-items: flex-start;
+    align-items: flex-end;
+
+    padding-right: 40px;
 
     gap: 25px;
-
-    margin-left: 0;
+    
 }
 
 .contact-box {
