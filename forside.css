@@ -46,8 +46,10 @@ body {
         no-repeat;
 
     /* Standard font */
-    font-family: sans-serif;
+    font-family: "Barlow Semi Condensed", sans-serif;
 }
+
+
 
 /* ================================================= */
 /* ================= CONTAINER ===================== */
@@ -137,7 +139,7 @@ body {
 
 .logo img {
     /* Logo størrelse på mobil */
-    width: 45px;
+    width: 30px;
 
     margin-left: 10px;
 }
@@ -181,7 +183,7 @@ body {
 /* De 3 hamburger-streger */
 .hamburger span {
     width: 28px;
-    height: 4px;
+    height: 2px;
 
     margin-right: 10px;
 
@@ -264,12 +266,13 @@ body {
     background-color: #fdf6d8;
 
     /* Tekst og billede ved siden af hinanden */
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
     align-items: center;
 
     /* Luft indeni boksen */
-    padding: 50px 40px;
+    padding: 40px 20px;
 
     /* Luft under hero */
     margin-bottom: 55px;
@@ -331,8 +334,9 @@ body {
 /* ================================================= */
 
 .hero-text {
-    /* Teksten fylder lidt over halvdelen */
-    width: 45%;
+
+    justify-self: start;
+
 }
 
 /* Overskrift */
@@ -354,13 +358,16 @@ body {
 .hero-text p {
     color: #0047d4;
 
+    /* Teksten fylder ca halvdelen */
+    width: 80%;
+
     font-size: 0.75rem;
 
     font-weight: bold;
 
     line-height: 1.2;
 
-    margin-right: 20px;
+    justify-self: start;
 }
 
 /* ================================================= */
@@ -370,16 +377,18 @@ body {
 .hero-image img {
     /* Billedstørrelse på mobil */
     /* Gør billedet smallere */
-    width: 170px;
+    width: 140px;
 
     /* Beholder proportionerne */
     height: auto;
 
-    display: block;
+    margin-left: auto;
 }
 
 .hero-image {
     width: 50%;
+
+    justify-self: start;
 }
 
 /* ================================================= */
@@ -391,22 +400,30 @@ body {
     background-color: #fdf6d8;
 
     /* Luft inde i den gule sektion */
-    padding: 55px 40px;
+    padding: 40px 20px;
 
     /* Luft over sektionen */
-    margin-top: 40px;
+    padding-top: 30px;
+
+    /* Luft under sektionen */
+    padding-bottom: 30px;
 
     /* Portfolio i 2 kolonner */
     display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+    /* Portfolio i én kolonne på mobil */
+    grid-template-columns: 1fr;
 
     /* Afstand mellem boksene */
-    gap: 55px;
+    gap: 20px;
 
     /* Bruges til tape */
     position: relative;
+
 }
+
+
+
 
 /* ================================================= */
 /* ================= TAPE ØVERST HØJRE ============= */
@@ -424,7 +441,7 @@ body {
     position: absolute;
 
     /* Placering */
-    right: -18px;
+    right: -25px;
     top: 12px;
 
     /* Rotation */
@@ -447,7 +464,7 @@ body {
     position: absolute;
 
     /* Placering */
-    left: -18px;
+    left: -35px;
     bottom: 12px;
 
     /* Rotation */
@@ -507,12 +524,22 @@ body {
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 768px) {
-    .portfolio-grid {
-        /* Portfolio i én kolonne på mobil */
-        grid-template-columns: 1fr;
-    }
+.portfolio-grid .portfolio-title {
+    position: static;
+
+    transform: none;
+
+    left: auto;
+
+    text-align: left;
+
+    color: #ffa538;
+
+    font-size: 1.6rem;
+
+    grid-column: 1 / -1;
 }
+
 
 /* ================================================= */
 /* ================= KLIKBART PORTFOLIO CARD ======= */
@@ -937,7 +964,7 @@ body {
     background-color: #fdf6d8;
 
     /* Luft indeni */
-    padding: 50px 40px;
+    padding: 40px 20px;
 
     /* Luft over section */
     margin-top: 65px;
@@ -993,6 +1020,8 @@ body {
 
     font-size: 1.6rem;
 
+    margin-top: -20px;
+
     margin-bottom: 25px;
 }
 
@@ -1004,7 +1033,7 @@ body {
     /* Én kolonne på mobil */
     flex-direction: column;
 
-    /* Centrerer indhold */
+    /* starter indhold til venstre*/
     align-items: flex-start;
 
     gap: 25px;
@@ -1093,7 +1122,11 @@ body {
 
     background-color: #fdf6d8;
 
-    padding: 50px 40px;
+    padding: 40px 20px;
+
+    padding-top: 30px;
+
+    padding-bottom: 30px;
 
     margin-bottom: 85px;
 
