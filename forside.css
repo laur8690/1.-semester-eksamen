@@ -360,7 +360,6 @@ body {
 .hero-text p {
     color: #0047d4;
 
-    /* Teksten fylder ca halvdelen */
     width: 80%;
 
     font-size: 0.75rem;
@@ -602,7 +601,7 @@ body {
     z-index: 1000;
 
     /* Luft rundt om boksen */
-    padding: 25px;
+    padding: 0px;
 }
 
 
