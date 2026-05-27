@@ -187,7 +187,7 @@ body {
 
     margin-right: 10px;
 
-    background-color: #0047d4;
+    background-color: #003EC2;
 }
 
 /* ================================================= */
@@ -248,7 +248,7 @@ body {
     text-decoration: none;
 
     /* Blå farve */
-    color: #0047d4;
+    color: #003EC2;
 
     /* Fed tekst */
     font-weight: bold;
@@ -358,7 +358,7 @@ body {
 
 /* Beskrivelse */
 .hero-text p {
-    color: #0047d4;
+    color: #003EC2;
 
     width: 100%;
 
@@ -392,7 +392,7 @@ body {
 
     justify-self: end;
 
-    margin-right: -8px;
+    margin-right: -5px;
 
 }
 
@@ -659,7 +659,7 @@ body {
 .modal-back {
 
     /* Blå tekst */
-    color: #0047d4;
+    color: #003EC2;
 
     /* Fed tekst */
     font-weight: bold;
@@ -940,7 +940,7 @@ body {
 .modal-box p {
 
     /* Brun tekst */
-    color: #3a1608;
+    color: #3D1200;
 
     /* Typewriter-look */
     font-family: "Roboto Mono", monospace;
@@ -1053,7 +1053,7 @@ body {
 /* Tekst styling */
 .about-text p {
 
-    color: #3a1608;
+    color: #3D1200;
 
     font-family: "Roboto Mono", monospace;
 
@@ -1202,7 +1202,7 @@ body {
 
     width: 100%;
 
-    color: #3a1608;
+    color: #3D1200;
 
     font-family: "Roboto Mono", monospace;
 
@@ -1236,7 +1236,7 @@ body {
 
     background-color: #e6e6e6;
 
-    color: #0047d4;
+    color: #003EC2;
 
     font-weight: bold;
 
@@ -1361,7 +1361,7 @@ body {
 /* Footer tekst */
 .footer h3 {
 
-    color: #0047d4;
+    color: #003EC2;
 
     font-size: 0.8rem;
 
@@ -1395,7 +1395,7 @@ body {
 
     font-size: 32px;
 
-    color: #0047d4;
+    color: #003EC2;
 
     object-fit: contain;
 
@@ -1406,7 +1406,7 @@ body {
 
     font-size: 32px;
 
-    color: #0047d4;
+    color: #003EC2;
 
     object-fit: contain;
 
@@ -1416,7 +1416,7 @@ body {
 
     text-decoration: none;
 
-    color: #0047d4;
+    color: #003EC2;
 
     
 }
