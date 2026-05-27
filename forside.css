@@ -377,7 +377,7 @@ body {
 
 .hero-image img {
     /* Billedstørrelse på mobil */
-    width: 140px;
+    width: 125px;
 
     /* Beholder proportionerne */
     height: auto;
