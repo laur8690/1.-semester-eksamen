@@ -337,7 +337,7 @@ body {
 
     justify-self: start;
 
-    width: 100%;
+    max-width: 220%;
 
 }
 
@@ -360,7 +360,7 @@ body {
 .hero-text p {
     color: #0047d4;
 
-    width: 80%;
+    width: 100%;
 
     font-size: 0.75rem;
 
@@ -940,7 +940,7 @@ body {
     color: #3a1608;
 
     /* Typewriter-look */
-    font-family: monospace;
+    font-family: "Roboto Mono", monospace;
 
     /* Tekststørrelse */
     font-size: 0.9rem;
@@ -1052,7 +1052,7 @@ body {
 
     color: #3a1608;
 
-    font-family: monospace;
+    font-family: "Roboto Mono", monospace;
 
     font-size: 0.8rem;
 
@@ -1201,7 +1201,7 @@ body {
 
     color: #3a1608;
 
-    font-family: monospace;
+    font-family: "Roboto Mono", monospace;
 
     font-size: 0.8rem;
 
