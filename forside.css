@@ -177,11 +177,14 @@ body {
     /* Afstand mellem stregerne */
     gap: 5px;
 
+    /* Ændrer musen til en hånd når man holder over menuen */
     cursor:pointer;
 }
 
 /* De 3 hamburger-streger */
 .hamburger span {
+
+    /* størrelsen på hamburger*/
     width: 28px;
     height: 2px;
 
@@ -205,37 +208,44 @@ body {
 /* Styling af dropdown */
 .nav-links {
 
-    /* Placering */
+    /* Gør menuen frit placerbar i forhold til nærmeste parent med position */
     position: absolute;
 
+    /* Placerer menuen lige under navbaren */
     top: 100%;
 
+    /* Flytter menuens venstre side til 50% af parentens bredde */
     left: 50%;
 
-    /* Fylder hele navbar bredde */
+    /* Gør menuen 50% bred i forhold til parent-elementet */
     width: 50%;
 
-    /* Baggrund */
+    /* Sætter baggrundsfarven på dropdown-menuen */
     background-color: #fdf6d8;
 
-    /* Links under hinanden */
+    /* Placerer links lodret under hinanden */
     flex-direction: column;
 
+    /* Centrerer links vandret inde i menuen */
     align-items: center;
 
+    /* Giver 20px afstand mellem links */
     gap: 20px;
 
-    /* Luft */
+    /* Tilføjer luft over og under linksene */
     padding: 25px 0;
 
-    /* Sørger for menu ligger øverst */
+    /* Sørger for at dropdown-menuen ligger ovenpå andre elementer */
     z-index: 20;
 
+    /* Fjerner standard punkttegn (bullet points) fra listen */
     list-style: none;
 
-    border-style:solid;
+    /* Tilføjer en synlig kant rundt om menuen */
+    border-style: solid;
 
-    border-color:#ffa538;
+    /* Gør kantens farve orange */
+    border-color: #ffa538;
 }
 
 /* ================================================= */
@@ -286,6 +296,7 @@ body {
 /* Tape øverst højre */
 .hero::before {
 
+    /* skaber et tomt element*/
     content: "";
 
     /* Tape størrelse */
@@ -309,6 +320,7 @@ body {
 /* Tape nederst venstre */
 .hero::after {
 
+    /* skaber et tomt element*/
     content: "";
 
     /* Tape størrelse */
@@ -333,41 +345,57 @@ body {
 /* ================= HERO TEKST ==================== */
 /* ================================================= */
 
+/* Tekstområde i hero-sektionen */
 .hero-text {
 
+    /* Placerer tekstboksen i starten (venstre side) af grid-området */
     justify-self: start;
 
+    /* Gør at tekstområdet kan være op til 220% af sin normale bredde */
     max-width: 220%;
-
 }
 
-/* Overskrift */
+/* Overskrift i hero-sektionen */
 .hero-text h1 {
+
+    /* Gør overskriften orange */
     color: #ffa538;
 
+    /* Sætter skriftstørrelsen til 1.7rem */
     font-size: 1.7rem;
 
+    /* Gør linjeafstanden kompakt */
     line-height: 1;
 
+    /* Giver 20px afstand under overskriften */
     margin-bottom: 20px;
 
+    /* Giver 20px afstand til højre side */
     margin-right: 20px;
 
+    /* Sørger for at ord ikke brydes unaturligt */
     word-break: normal;
 }
 
-/* Beskrivelse */
+/* Beskrivende tekst i hero-sektionen */
 .hero-text p {
+
+    /* Gør teksten blå */
     color: #003EC2;
 
+    /* Gør teksten lige så bred som parent-elementet */
     width: 100%;
 
+    /* Sætter skriftstørrelsen til 0.75rem */
     font-size: 0.75rem;
 
+    /* Gør teksten fed */
     font-weight: bold;
 
+    /* Giver lidt luft mellem tekstlinjerne */
     line-height: 1.2;
 
+    /* Placerer teksten i starten af grid-området */
     justify-self: start;
 }
 
@@ -388,10 +416,13 @@ body {
 }
 
 .hero-image {
+    /* Gør billedets container lige så bred som parent-elementet */
     width: 100%;
 
+    /* Placerer billedet mod slutningen (højre side) af grid-området */
     justify-self: end;
 
+    /* Flytter billedet 5px længere mod højre */
     margin-right: -5px;
 
 }
@@ -436,6 +467,7 @@ body {
 
 .portfolio-grid::before {
 
+    /* skaber et tomt element*/
     content: "";
 
     width: 80px;
@@ -458,7 +490,7 @@ body {
 /* ================================================= */
 
 .portfolio-grid::after {
-
+    /* skaber et tomt element*/
     content: "";
 
     width: 80px;
@@ -513,35 +545,53 @@ body {
 
 }
 
-/* Tekst, hvis du stadig har h2 i boksene */
+/* Overskrifter inde i portfolio-bokse */
 .portfolio-grid h2 {
-    color:#ffa538;
 
+    /* Gør teksten orange */
+    color: #ffa538;
+
+    /* Sætter skriftstørrelsen til 1.8rem */
     font-size: 1.8rem;
 
+    /* Centrerer teksten vandret */
     text-align: center;
 
+    /* Gør overskriften frit placerbar i forhold til nærmeste positionerede parent */
     position: absolute;
 
+    /* Placerer overskriften 50% ned fra toppen */
     top: 50%;
+
+    /* Placerer overskriften 50% ind fra venstre */
     left: 50%;
 
+    /* Flytter teksten tilbage for at centrere den helt præcist */
     transform: translate(-50%, -50%);
 }
 
+/* Portfolio-sektionens hovedoverskrift */
 .portfolio-grid .portfolio-title {
+
+    /* Giver overskriften normal placering i dokumentflowet */
     position: static;
 
+    /* Fjerner tidligere transform-effekter */
     transform: none;
 
+    /* Nulstiller left-værdien */
     left: auto;
 
+    /* Venstrestiller teksten */
     text-align: left;
 
+    /* Gør teksten orange */
     color: #ffa538;
 
+    /* Sætter skriftstørrelsen til 1.6rem */
     font-size: 1.6rem;
 
+    /* Lader overskriften fylde alle grid-kolonner */
     grid-column: 1 / -1;
 }
 
@@ -575,7 +625,10 @@ body {
     transition: 0.3s ease;
 }
 
+/* Effekt når musen holdes over portfolio-billedet */
 .portfolio-card:hover img {
+
+    /* Forstørrer billedet til 105% af dets normale størrelse */
     transform: scale(1.05);
 }
 
@@ -796,21 +849,25 @@ body {
 
 .modal-images6 {
 
+     /* Gør containeren til et grid-layout */
     display: grid;
 
+    /* Opretter 2 lige brede kolonner */
     grid-template-columns: 1fr 1fr;
 
+    /* Giver 20px afstand mellem elementerne */
     gap: 20px;
 
+    /* Placerer elementerne i toppen af grid-cellerne */
     align-items: start;
 
-
-    /* Centrerer hele grid'et */
+    /* Centrerer hele grid-layoutet inde i containeren */
     justify-content: center;
 
-    /* Centrerer indholdet i hver kolonne */
+    /* Centrerer indholdet inde i hver grid-kolonne */
     justify-items: center;
 
+    /* Giver 20px afstand under grid-containeren */
     margin-bottom: 20px;
 }
 
@@ -984,6 +1041,7 @@ body {
 /* Tape øverst til venstre */
 .about-section::before {
 
+    /* skaber et tomt element*/
     content: "";
 
     width: 80px;
@@ -1001,7 +1059,7 @@ body {
 
 /* Tape nederst til højre */
 .about-section::after {
-
+    /* skaber et tomt element*/
     content: "";
 
     width: 80px;
@@ -1142,7 +1200,7 @@ body {
 
 /* Tape nederst venstre */
 .contact-section::before {
-
+    /* skaber et tomt element*/
     content: "";
 
     width: 70px;
@@ -1160,7 +1218,7 @@ body {
 
 /* Tape øverst højre */
 .contact-section::after {
-
+    /* skaber et tomt element*/
     content: "";
 
     width: 70px;
@@ -1234,35 +1292,48 @@ body {
 /* Kontakt bokse */
 .contact-box {
 
+    /* Gør baggrunden lysegrå */
     background-color: #e6e6e6;
 
+    /* Gør teksten blå */
     color: #003EC2;
 
+    /* Gør teksten fed */
     font-weight: bold;
 
+    /* Sætter skriftstørrelsen til 0.8rem */
     font-size: 0.8rem;
 
+    /* Giver luft inde i boksen (12px top/bund og 15px venstre/højre) */
     padding: 12px 15px;
 
+    /* Afrunder hjørnerne på boksen */
     border-radius: 6px;
 
+    /* Gør boksen kun så bred som dens indhold */
     width: fit-content;
 
+    /* Forhindrer boksen i at blive bredere end parent-elementet */
     max-width: 100%;
 
+    /* Fjerner standard understregning fra links */
     text-decoration: none;
 
+    /* Gør hover- og overgangseffekter bløde over 0.2 sekunder */
     transition: 0.2s;
 
-    flex: 1
+    /* Gør at boksen kan vokse og dele plads i et flex-layout */
+    flex: 1;
 
 }
 
 
 .contact-box:hover {
 
+    /* Gør baggrunden lidt mørkere ved hover */
     background-color: #d8d8d8;
 
+    /* Forstørrer boksen til 102% af dens normale størrelse */
     transform: scale(1.02);
 }
 
